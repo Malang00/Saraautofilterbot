@@ -50,6 +50,8 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 VERIFY_REQ_CHNL = int(environ.get('VERIFY_REQ_CHNL', ''))
+NEW_USER_LOG = int(environ.get('NEW_USER_LOG', ''))
+
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
