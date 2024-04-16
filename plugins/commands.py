@@ -54,6 +54,7 @@ async def start(client, message):
                     InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.react(emoji="🔥")
         m=await message.reply_text("👀")
         await asyncio.sleep(1)
         await m.delete()
