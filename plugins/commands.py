@@ -23,7 +23,14 @@ BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming & is_subscribed)
 async def start(client, message):
+    botid = client.me.id
+    await message.react(emoji=random.choice(REACTIONS))
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        if not await db.get_chat(message.chat.id):
+            total = await client.get_chat_members_count(message.chat.id)
+            username = f'@{message.chat.username}' if message.chat.username else 'Private'
+            await client.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, username, total))       
+            await db.add_chat(message.chat.id, message.chat.title)
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
