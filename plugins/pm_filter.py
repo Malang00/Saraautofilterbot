@@ -71,7 +71,7 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @TG_Movie_Req_Grp</b>")
+            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @Malangmovie3</b>")
 
 
 @Client.on_callback_query(filters.regex(r"^next"))
@@ -141,7 +141,7 @@ async def next_page(bot, query):
             ]
         )
         btn.insert(0, [
-            InlineKeyboardButton("🌀 𝐓𝐆 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌀", url=f"https://t.me/+iLfZB23wdMJiNjQ1") 
+            InlineKeyboardButton("🌀 𝐓𝐆 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌀", url=f"https://t.me/Malangmovie") 
         ])
     else:
         btn = []
@@ -492,7 +492,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     # if ENABLE_SHORTLINK == True:
     btn.insert(0, [
         InlineKeyboardButton("sᴛᴀʀᴛ ʙᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-        InlineKeyboardButton("🌀 𝐓𝐆 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌀", url=f"https://t.me/+iLfZB23wdMJiNjQ1")
+        InlineKeyboardButton("🌀 𝐓𝐆 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌀", url=f"https://t.me/Malangmovie")
     ])
     # else:
     #     btn.insert(0, [
@@ -661,7 +661,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     btn.insert(0, [
-        InlineKeyboardButton("🌀 𝐓𝐆 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌀", url=f"https://t.me/+iLfZB23wdMJiNjQ1"),
+        InlineKeyboardButton("🌀 𝐓𝐆 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌀", url=f"https://t.me/Malangmovie"),
         InlineKeyboardButton("Sᴇʟᴇᴄᴛ ᴀɢᴀɪɴ", callback_data=f"seasons#{key}")
     ])
     
@@ -1306,7 +1306,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("", url="telegram.me/ComfyTraderzBot")
+                 InlineKeyboardButton("", url="telegram.me/Malang_moviebot")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1467,7 +1467,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('✉️ ᴀɴʏ ǫᴜᴇʀʏ ✉️', url='https://telegram.me/Tg_support1_bot')
+            InlineKeyboardButton('✉️ ᴀɴʏ ǫᴜᴇʀʏ ✉️', url='https://telegram.me/Malang_moviebot')
         ], [
             InlineKeyboardButton('∙ ꜰɪʟᴛᴇʀs ∙', callback_data='filters'),
             InlineKeyboardButton('∙ ꜰɪʟᴇ sᴛᴏʀᴇ ∙', callback_data='store_file')
@@ -1783,12 +1783,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "owner_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/KUSHALHK")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/Malang_moviebot")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
                 query.message.id, 
-                InputMediaPhoto("https://graph.org/file/0219abb5fa7e21faf931a.jpg")
+                InputMediaPhoto("https://telegra.ph/file/930969cf69d84be2b215b.jpg")
             )
             reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
@@ -1814,7 +1814,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await client.edit_message_media(
                 query.message.chat.id, 
                 query.message.id, 
-                InputMediaPhoto("https://graph.org/file/0219abb5fa7e21faf931a.jpg")
+                InputMediaPhoto("https://telegra.ph/file/930969cf69d84be2b215b.jpg")
             )
             reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
@@ -1852,7 +1852,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "shortlink_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/Tg_support1_bot")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/Malang_moviebot")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -2077,7 +2077,7 @@ async def auto_filter(client, msg, spoll=False):
     #         InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}")
     #     ])
         btn.insert(0, [
-            InlineKeyboardButton("🌀 𝐓𝐆 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌀", url=f"https://t.me/+iLfZB23wdMJiNjQ1")
+            InlineKeyboardButton("🌀 𝐓𝐆 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌀", url=f"https://t.me/Malangmovie")
         ])
     # if ENABLE_TUTORIAL == True:
     #     btn.insert(0, [
